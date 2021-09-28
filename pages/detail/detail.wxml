@@ -1,0 +1,18 @@
+<view class="detail">
+  <view class="item flex">
+    <view>标题：</view>
+    <view>{{subject.Title}}</view>
+  </view>
+  <view class="item flex">
+    <view>分类：</view>
+    <view>{{subject.Section.Name}}</view>
+  </view>
+  <view class="item">
+    <view>答案：</view>
+    <view>{{subject.Answer}}</view>
+  </view>
+  <view class="item">
+    <view>解析：</view>
+    <view>{{subject.Desc}}</view>
+  </view>
+</view>

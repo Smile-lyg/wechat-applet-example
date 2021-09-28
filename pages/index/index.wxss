@@ -1,0 +1,19 @@
+swiper{
+  /* border: 1px solid red; */
+  height: calc(100vw / 1080 * 420);
+}
+image{
+  width: 100vw;
+}
+/* 响应式单位 rpx ，在 iPhone6 中 1px === 2rpx*/
+.box{
+  width: 200rpx;
+  height: 200rpx;
+  border: 2rpx solid #000;
+  font-size: 60rpx;
+}
+.person{
+  display: flex;
+  justify-content: space-around;
+}
+

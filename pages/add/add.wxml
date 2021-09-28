@@ -1,0 +1,23 @@
+<view class="add">
+  <view class="flex item a-i-c">
+    <label>标题：</label>
+    <!-- 简单双向绑定 model:value，页面值变化更新js中的值 -->
+    <input class="txt" type="text"  placeholder="请输入标题" model:value="{{title}}"/>
+  </view>
+  <view class="flex item a-i-c">
+    <label>分类：</label>
+    <!-- 跳转选择分类页面 -->
+    <input class="txt" type="number" bindtap="openType" disabled placeholder="请选择分类编号" model:value="{{section_name}}"/>
+  </view>
+  <view class="flex item a-i-c">
+    <label>答案：</label>
+    <textarea name="" class="txtarea" placeholder="请输入答案" model:value="{{answer}}"></textarea>
+  </view>
+  <view class="flex item a-i-c">
+    <label>解析：</label>
+    <textarea name="" class="txtarea" placeholder="请输入解析" model:value="{{desc}}"></textarea>
+  </view>
+  <view class="item">
+    <button type="primary" bindtap="addSubject">添加</button>
+  </view>
+</view>

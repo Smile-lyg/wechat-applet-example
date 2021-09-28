@@ -1,0 +1,18 @@
+<!-- 下拉刷新，上拉加载更多 -->
+<!-- 点击条目跳转传参 -->
+<!-- 1. 导入wxs文件 -->
+<wxs src="../wxs/filter.wxs" module="filter"></wxs>
+
+<scroll-view class="box" scroll-y>
+    <navigator url="../detail/detail?id={{item.Id}}&sid={{item.Section_id}}&title={{item.Title}}" class="subject" wx:for="{{subjectList}}" wx:key="index">
+      <view class="item title">{{item.Title+(index+1)}}</view>
+      <!-- 2. 在模板中使用函数 -->
+      
+      <view class="item flex j-c-sb">
+        <view>{{item.Section.Name}}</view>
+        <view class="time">{{filter.formatTime(item.Createtime)}}</view>
+      </view>
+    </navigator>
+    <!-- 右下角固定添加按钮 -->
+    <navigator url="../add/add"  class="addbtn">+</navigator>
+  </scroll-view>

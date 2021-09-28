@@ -1,0 +1,18 @@
+/**app.wxss 全局样式**/
+/* 定义flex布局常用样式 */
+
+.flex {
+  display: flex;
+}
+.j-c-c {
+  justify-content: center;
+}
+.j-c-sa {
+  justify-content: space-around;
+}
+.j-c-sb {
+  justify-content: space-between;
+}
+.a-i-c{
+  align-items: center;
+}

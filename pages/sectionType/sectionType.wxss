@@ -1,0 +1,14 @@
+.sectiontype{
+  padding: 10rpx;
+}
+
+.item{
+  width: 200rpx;
+  height: 60rpx;
+  background: #1296db;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  margin: 10rpx 0;
+}

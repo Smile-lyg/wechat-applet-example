@@ -1,0 +1,14 @@
+.goodlist .item{
+  display: flex;
+  justify-content: space-between;
+  height: 72rpx;
+  line-height: 72rpx;
+  
+}
+.blue{
+  background: lightblue;
+}
+.box{
+  border: 1px solid #ccc;
+  padding: 20rpx 0;
+}

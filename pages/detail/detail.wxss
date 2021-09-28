@@ -1,0 +1,9 @@
+/* pages/detail/detail.wxss */
+
+.detail {
+  padding: 10rpx;
+}
+
+.detail .item {
+  padding: 10rpx 0;
+}

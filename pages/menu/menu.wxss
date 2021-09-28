@@ -1,0 +1,36 @@
+
+.container {
+  /* border: 2rpx solid red; */
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.container .left {
+  width: 180rpx;
+  background: #eee;
+}
+.container .right {
+ flex: 1;
+ padding:0 10rpx;
+}
+.container .left .type {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-left: 10rpx solid transparent;
+}
+/* 左侧点击高亮效果 */
+.container .left  .active {
+  border-left-color: #1296db;
+  background: #fff;
+}
+.container .right .subject .time {
+  text-align: right;
+}
+.container .right .subject {
+  padding: 10rpx 0;
+  border-bottom: 2rpx solid #eee;
+}
+.container .right .subject>view {
+  padding: 10rpx 0;
+}

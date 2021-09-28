@@ -1,0 +1,5 @@
+<view class="sectiontype">
+  <view class="item" wx:for="{{sectionList}}" wx:key="index" data-id="{{item.Id}}" data-name="{{item.Name}}" bindtap="sectionClick">
+  {{item.Name}}
+  </view>
+</view>

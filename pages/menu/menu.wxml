@@ -1,0 +1,17 @@
+<!-- 1. 导入wxs文件 -->
+<wxs src="../wxs/filter.wxs" module="filter"></wxs>
+
+<view class="container flex">
+<!-- scroll-view 是滚动视图 scroll-y 设置纵向滚动 -->
+  <scroll-view class="left" scroll-y >
+    <view data-index="{{index}}" data-id="{{item.Id}}" bindtap="clickType" class="type {{index === activeIndex? 'active':''}}" wx:for="{{sectionList}}" wx:key="Id">{{item.Name}}</view>
+  </scroll-view>
+  <scroll-view class="right" scroll-y>
+    <navigator url="../detail/detail?id={{item.Id}}&sid={{item.Section_id}}&title={{item.Title}}" class="subject" wx:for="{{subjectList}}" wx:key="index">
+      <view>{{item.Section.Name+(index+1)}}</view>
+      <!-- 2. 在模板中使用函数 -->
+      <view class="time">{{filter.formatTime(item.Createtime)}}</view>
+    </navigator>
+  </scroll-view>
+</view>
+

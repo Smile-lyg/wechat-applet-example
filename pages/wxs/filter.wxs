@@ -1,0 +1,30 @@
+// wxs 里面不能写es6语法
+var formatTime = function (val) {
+  var date = getDate(parseInt(val))
+  // 当前时间
+  var now = getDate()
+  // 计算两个时间之间的 间隔分钟
+  var m = (now - date) / 1000 / 60
+  //console.log(m)
+  if(m<=10) return '刚刚'
+  if(m<=60) return parseInt(m)+'分钟前'
+  if(m/60 <= 24) return parseInt(m/60)+'小时前'
+  //if(m/60/24 <= 30) return parseInt(m/60/24)+'天前'
+
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+  return [year, month, day].map(formatNumber).join('-')
+}
+// 一位数补0
+var formatNumber = function (n) {
+  n = n.toString()
+  return n[1] ? n : '0'+n
+}
+// 导出语句有规范
+module.exports = {
+  formatTime: formatTime
+}

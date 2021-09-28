@@ -1,0 +1,44 @@
+<!-- 滑块视图 -->
+<swiper circular="true" indicator-dots="true" indicator-color="#fff" indicator-active-color="#00d499" autoplay
+  interval="3000">
+  <swiper-item>
+    <image mode="widthFix"
+      src="http://p1.music.126.net/RbzIRFtGRKhhxQfG7Vjadw==/109951166451096299.jpg?imageView&quality=89"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix"
+      src="http://p1.music.126.net/opyx_wEQuZHlAxC5DUp2hw==/109951166450914802.jpg?imageView&quality=89"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix"
+      src="http://p1.music.126.net/-46eJ57a6DwVSsZA3Xs7ew==/109951166450905539.jpg?imageView&quality=89"></image>
+  </swiper-item>
+</swiper>
+<view style="width:100vw;height:2rpx;background:#000;margin: 20rpx 0;"></view>
+<view class="box">
+  <text>321</text>
+</view>
+<!-- 在页面中渲染 js 数据 -->
+<!-- 直接使用插值表达式 -->
+<view class="person">
+  <view><text>姓名：</text><text>{{name}}</text></view>
+  <view><text>年龄：</text><text>{{age}}</text></view>
+</view>
+
+<view>
+  <view wx:for="{{users}}" wx:key="ids">
+    <text>{{item.name}} ：</text>
+    <!-- 嵌套数组中使用wx:for-item="xxx" 更改默认item命名，避免混淆 -->
+    <text wx:for="{{item.cars}}" wx:key="index" wx:for-item="car">{{car}} </text>
+  </view>
+</view>
+<view style="width:100vw;height:2rpx;background:#000;margin: 20rpx 0;"></view>
+<!-- 页面跳转 navigator 标签，url属性设置页面地址 -->
+<!-- open-type设置跳转方式，默认navigate 只能跳转普通页面 -->
+<navigator url="../demo1/demo1" open-type="navigate">到条件渲染页面</navigator>
+<!-- switchTab 跳转tabbar页面 -->
+<navigator url="../menu/menu" open-type="switchTab">到菜单页面</navigator>
+
+<!-- 通过js代码跳转页面 -->
+<button size="mini" type="primary" bindtap="goToDemo1">到demo1</button>
+<button size="mini" type="primary" bindtap="goToMenu">到菜单</button>

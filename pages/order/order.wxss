@@ -1,0 +1,35 @@
+/* pages/order/order.wxss */
+
+.box {
+  box-sizing: border-box;
+  padding: 10rpx 0 10rpx 10rpx;
+  /* background: lightblue; */
+}
+
+.box .subject {
+  padding: 10rpx 10rpx 0 0;
+  border-bottom: 4rpx solid #eee;
+}
+
+.subject .item {
+  line-height: 80rpx;
+}
+
+.subject .title {
+  font-weight: bold;
+}
+
+.addbtn {
+  position: fixed;
+  right: 60rpx;
+  bottom: 80rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(18, 150, 219, 0.8);
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 70rpx;
+  border-radius: 50%;
+  color: #fff;
+
+}

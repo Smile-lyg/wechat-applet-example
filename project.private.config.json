@@ -1,0 +1,54 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "条件渲染",
+          "pathName": "pages/demo1/demo1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "菜单页面",
+          "pathName": "pages/menu/menu",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "列表页面",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "详情页面",
+          "pathName": "pages/detail/detail",
+          "query": "id=123&sid=1",
+          "scene": null
+        },
+        {
+          "name": "添加页",
+          "pathName": "pages/add/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "分类页",
+          "pathName": "pages/sectionType/sectionType",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+
+<!-- wx:for用于循环列表，wx:key设置唯一标识 默认 index 是每一项的索引，item 是循环的每一项数据-->
+
+<view wx:for="{{goodList}}" wx:key="id" class="goodlist">
+  <view  class="item {{index%2===0? 'blue':''}}">
+    <!-- 按钮的 bindtap 是点击事件 -->
+    <text>{{item.id}} : {{item.name}}</text>
+    <!-- 使用 data-xxx="yyy" 自定义属性 -->
+    <button size="mini" bindtap="delGood" data-index="{{index}}" data-name="{{item.name}}">删除</button>
+  </view>
+</view>
+
+<view style="width:100vw;height:2rpx;background:#000;margin: 20rpx 0;"></view>
+
+<!-- wx:if 用于条件渲染 -->
+<view wx:for="{{goodList}}" wx:key="id" class="goodlist">
+  <view wx:if="{{index%2===0}}"  class="item blue">
+    <!-- 按钮的 bindtap 是点击事件 -->
+    <text>{{item.id}} : {{item.name}}</text>
+    <!-- 使用 data-xxx="yyy" 自定义属性 -->
+    <button size="mini" bindtap="delGood" data-index="{{index}}" data-name="{{item.name}}">删除</button>
+  </view>
+  <view wx:else  class="item">
+    <!-- 按钮的 bindtap 是点击事件 -->
+    <text>{{item.id}} : {{item.name}}</text>
+    <!-- 使用 data-xxx="yyy" 自定义属性 -->
+    <button size="mini" bindtap="delGood" data-index="{{index}}" data-name="{{item.name}}">删除</button>
+  </view>
+</view>
+
+<view style="width:100vw;height:2rpx;background:#000;margin: 20rpx 0;"></view>
+
+<button size="mini" type ="primary" bindtap="showToogle">显示/隐藏</button>
+<!-- wx:if 的条件成立就渲染元素，不成立就不渲染 -->
+<view class="box" wx:if="{{isShow}}">Hello World</view>
+<!-- hidden 是否隐藏，通过 display 样式来控制显示和隐藏 -->
+<view hidden="{{isHidden}}" class="box">你好 世界</view>
+
+<!-- 总结：如果元素需要反复显示和隐藏使用 hidden，如果只是在界面加载时选择性加载元素使用 wx:if -->
