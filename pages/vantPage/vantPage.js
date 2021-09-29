@@ -15,6 +15,7 @@ Page({
     maxDate: new Date('2022-9-1').getTime(), // 最大日期
     showPopup: false, // 是否显示弹出层
     currentDate: new Date().getTime(), // 当前时间
+    active: 0  // tab选项卡的选中索引
   },
   // 显示日历控件
   onShowCalendar() {
@@ -62,6 +63,13 @@ Page({
   // 时间选择器取消
   onDateCancel() {
     this.onClosePopup()
+  },
+  // 当前激活的标签改变时触发
+  onTabChange({detail:{index,title}}){
+    this.setData({
+      active: index
+    })
+    console.log(this.data.active, title);
   },
   /**
    * 生命周期函数--监听页面加载

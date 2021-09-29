@@ -2,6 +2,30 @@
   <van-cell title="出生日期" value="{{ bornDate }}" bindtap="onShowCalendar" />
   <van-cell title="日期" value="{{ inDate }}" bindtap="onShowPopup" />
 </van-cell-group>
+
+<!-- 宫格 -->
+<van-grid>
+  <van-grid-item icon="location-o" text="位置" />
+  <van-grid-item icon="like-o" text="喜欢" />
+  <van-grid-item icon="fire-o" text="火苗" />
+  <van-grid-item icon="star-o" text="收藏" />
+</van-grid>
+
+<!-- 选项卡 -->
+<van-tabs animated swipeable color="#1296db">
+  <van-tab title="标签 1"><view class="item">内容 1</view></van-tab>
+  <van-tab title="标签 2"><view class="item">内容 2</view></van-tab>
+  <van-tab title="标签 3"><view class="item">内容 3</view></van-tab>
+  <van-tab title="标签 4"><view class="item">内容 4</view></van-tab>
+</van-tabs>
+
+<van-tabs active="{{ active }}" color="#1296db" type="card" animated  bind:change="onTabChange">
+  <van-tab title="标签 1">内容 1</van-tab>
+  <van-tab title="标签 2">内容 2</van-tab>
+  <van-tab title="标签 3">内容 3</van-tab>
+  <van-tab title="标签 4">内容 4</van-tab>
+</van-tabs>
+
 <!-- 日历 -->
 <van-calendar 
 title="选择生日日期" 

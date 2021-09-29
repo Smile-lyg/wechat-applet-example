@@ -1,1 +1,4 @@
 /* pages/vantPage/vantPage.wxss */
+.item{
+  height: 200rpx;
+}
