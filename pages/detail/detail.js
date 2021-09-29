@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    subject: {}, // 问题数据
+    subject: {}, // 详情数据
+    id:0,
+    sid:0
   },
   // 根据id获取详细信息
   async getSubjectDetail(id, sid, title) {
@@ -28,7 +30,8 @@ Page({
       sid,
       title
     } = options
-
+    this.data.id = id
+    this.data.sid = sid
     this.getSubjectDetail(id, sid, title)
 
   },
@@ -65,7 +68,11 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    this.getSubjectDetail(this.data.id, this.data.sid)
 
+    setTimeout(()=>{
+      wx.stopPullDownRefresh()
+    },1000)
   },
 
   /**

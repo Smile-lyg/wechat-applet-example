@@ -1,18 +1,21 @@
-<view class="detail">
-  <view class="item flex">
-    <view>标题：</view>
+
+<view class="detail" wx:if="{{subject.Title}}">
+  <view class="item">
+    <van-divider contentPosition="left" textColor="#1296db">标题</van-divider>
     <view>{{subject.Title}}</view>
   </view>
-  <view class="item flex">
-    <view>分类：</view>
+  <view class="item">
+    <van-divider contentPosition="left" textColor="#1296db">分类</van-divider>
     <view>{{subject.Section.Name}}</view>
   </view>
   <view class="item">
-    <view>答案：</view>
+    <van-divider contentPosition="left" textColor="#1296db">答案</van-divider>
     <view>{{subject.Answer}}</view>
   </view>
   <view class="item">
-    <view>解析：</view>
+    <van-divider contentPosition="left" textColor="#1296db">解析</van-divider>
     <view>{{subject.Desc}}</view>
   </view>
 </view>
+<!-- 在没有获取到数据时显示空状态 -->
+<van-empty wx:else description="暂无信息" />

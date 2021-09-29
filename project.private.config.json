@@ -33,7 +33,7 @@
         {
           "name": "详情页面",
           "pathName": "pages/detail/detail",
-          "query": "id=123&sid=1",
+          "query": "id=123&sid=1&title=啦啦啦",
           "scene": null
         },
         {
