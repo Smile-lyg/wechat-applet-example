@@ -11,8 +11,8 @@ Page({
     bornDate: '', // 日期
     inDate: '',
     showCalendar: false, // 是否显示日历组件
-    minDate: new Date('2020-9-1').getTime(), // 最小日期范围
-    maxDate: new Date('2022-9-1').getTime(), // 最大日期
+    minDate: new Date(2020,9,1).getTime(), // 最小日期范围
+    maxDate: new Date(2022,9,1).getTime(), // 最大日期
     showPopup: false, // 是否显示弹出层
     currentDate: new Date().getTime(), // 当前时间
     active: 0  // tab选项卡的选中索引

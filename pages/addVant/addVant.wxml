@@ -43,7 +43,8 @@
     <van-button 
     loading="{{loading }}" 
     loading-text="提交中..." 
-    icon="plus" type="primary" 
+    icon="plus" 
+    type="primary" 
     size="large" 
     bindclick="addSubject"
     custom-style="background:#1296db;color:#fff;"
