@@ -8,7 +8,8 @@ Page({
     subjectList:[],  // 课程数组
     sectionId: 1,   // 课程分类id
     pageIndex: 1,   // 页码
-    pageSize: 10    // 数据条数
+    pageSize: 10,    // 数据条数
+    keyword:''      // 搜索关键字
   },
   // 获取课程详细信息
   async getSubject(){
@@ -22,6 +23,8 @@ Page({
       type:'all',
       // 分类id
       // section_id:this.data.sectionId,
+      // 根据标题搜索
+      title: this.data.keyword.trim(),
       // 页码
       pageIndex: this.data.pageIndex,
       // 数据条数
@@ -37,6 +40,21 @@ Page({
      wx.$msg('没有更多了', 'none')
    }
     
+  },
+  // 监听搜索框
+  onSearch(){
+    // console.log(this.data.keyword);
+    if(this.data.keyword.trim().length !== 0){
+      this.getSubject()
+    }else{
+      this.onClear()
+    }
+  },
+  // 清空搜索框
+  onClear(){
+    this.setData({
+      keyword:''
+    })
   },
   /**
    * 生命周期函数--监听页面加载
