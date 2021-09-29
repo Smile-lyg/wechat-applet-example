@@ -1,0 +1,13 @@
+<van-cell-group>
+  <van-cell title="生日" value="{{ bornDate }}" bindtap="onShowCalendar" />
+</van-cell-group>
+<!-- 日历 -->
+<van-calendar 
+title="选择生日日期" 
+show="{{ showCalendar }}" 
+color="#1296db" 
+bind:close="onCloseCalendar" 
+bind:confirm="onCalendarConfirm" 
+min-date="{{ minDate }}"
+
+/>

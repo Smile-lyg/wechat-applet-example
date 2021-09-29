@@ -19,7 +19,8 @@
     "pages/detail/detail",
     "pages/add/add",
     "pages/addVant/addVant",
-    "pages/sectionType/sectionType"
+    "pages/sectionType/sectionType",
+    "pages/vantPage/vantPage"
   ],
   "window": {
     "backgroundTextStyle": "light",
