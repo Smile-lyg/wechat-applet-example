@@ -59,6 +59,12 @@
           "pathName": "pages/vantPage/vantPage",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "自定义组件页面",
+          "pathName": "pages/componentPage/componentPage",
+          "query": "",
+          "scene": null
         }
       ]
     }

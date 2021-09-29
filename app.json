@@ -20,7 +20,8 @@
     "pages/add/add",
     "pages/addVant/addVant",
     "pages/sectionType/sectionType",
-    "pages/vantPage/vantPage"
+    "pages/vantPage/vantPage",
+    "pages/componentPage/componentPage"
   ],
   "window": {
     "backgroundTextStyle": "light",
