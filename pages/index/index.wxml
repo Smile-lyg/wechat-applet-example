@@ -40,5 +40,5 @@
 <navigator url="../menu/menu" open-type="switchTab">到菜单页面</navigator>
 
 <!-- 通过js代码跳转页面 -->
-<button size="mini" type="primary" bindtap="goToDemo1">到demo1</button>
-<button size="mini" type="primary" bindtap="goToMenu">到菜单</button>
+<view><button size="mini" type="primary" bindtap="goToDemo1" style="background:#1296db;">到demo1</button></view>
+<view><button size="mini" type="primary" bindtap="goToMenu" style="background:#1296db;">到菜单</button></view>

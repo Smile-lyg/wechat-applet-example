@@ -1,0 +1,8 @@
+/* pages/addVant/addVant.wxss */
+.container{
+  padding: 10rpx;
+}
+.btn{
+  text-align: center;
+  padding: 20rpx 100rpx 0;
+}

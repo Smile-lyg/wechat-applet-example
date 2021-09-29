@@ -47,6 +47,12 @@
           "pathName": "pages/sectionType/sectionType",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "vant添加页",
+          "pathName": "pages/addVant/addVant",
+          "query": "",
+          "scene": null
         }
       ]
     }

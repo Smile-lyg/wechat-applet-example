@@ -1,0 +1,72 @@
+<view class="container">
+  <van-field
+    model:value="{{ title }}"
+    required
+    clearable
+    label="标题"
+    title-width="60rpx"
+    placeholder="请输入标题"
+  />
+  <!-- 分类设置只读，值从选择器传回 -->
+  <van-field
+    model:value="{{ section_name }}"
+    required
+    clearable
+    label="分类"
+    title-width="60rpx"
+    readonly
+    placeholder="请选择分类"
+    bindtap="showPopup"
+  />
+  <van-field
+    model:value="{{ answer }}"
+    required
+    label="答案"
+    type="textarea"
+    clearable
+    placeholder="请输入答案"
+    autosize="{{ textareaHeight }}"
+    title-width="60rpx"
+  />
+  <van-field
+    model:value="{{ desc }}"
+    label="解析"
+    type="textarea"
+    clearable
+    placeholder="请输入解析"
+    autosize="{{ textareaHeight }}"
+    title-width="60rpx"
+  />
+  <view class="btn">
+  <!-- 添加按钮 -->
+  <!-- loading 状态下点击事件不会触发，节流 -->
+    <van-button 
+    loading="{{loading }}" 
+    loading-text="提交中..." 
+    icon="plus" type="primary" 
+    size="large" 
+    bindclick="addSubject"
+    custom-style="background:#1296db;color:#fff;"
+    >
+    添加
+    </van-button>
+  </view>
+  <!-- 弹出层 -->
+  <van-popup 
+  show="{{ show }}" 
+  bind:close="onPopupClose" 
+  position="bottom"
+  custom-style="height: 50%"
+  round
+  >
+  <!-- 选择器 -->
+  <van-picker 
+  columns="{{ sectionList }}" 
+  show-toolbar
+  title="标题"
+  bind:cancel="onCancel"
+  bind:confirm="onConfirm"
+  value-key="Name"
+  />
+  </van-popup>
+</view>

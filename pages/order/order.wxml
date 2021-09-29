@@ -18,5 +18,6 @@
     </view>
   </navigator>
   <!-- 右下角固定添加按钮 -->
-  <navigator url="../add/add" class="addbtn">+</navigator>
+  <!-- <navigator url="../add/add" class="addbtn">+</navigator> -->
+  <navigator url="../addVant/addVant" class="addbtn">+</navigator>
 </scroll-view>
