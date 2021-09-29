@@ -2,7 +2,8 @@
   "usingComponents": {
     "van-calendar": "@vant/weapp/calendar/index",
     "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index"
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
   },
   "navigationBarTitleText": "Vant组件"
 }

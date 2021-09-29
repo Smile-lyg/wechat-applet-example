@@ -1,5 +1,6 @@
 <van-cell-group>
-  <van-cell title="生日" value="{{ bornDate }}" bindtap="onShowCalendar" />
+  <van-cell title="出生日期" value="{{ bornDate }}" bindtap="onShowCalendar" />
+  <van-cell title="日期" value="{{ inDate }}" bindtap="onShowPopup" />
 </van-cell-group>
 <!-- 日历 -->
 <van-calendar 
@@ -9,5 +10,23 @@ color="#1296db"
 bind:close="onCloseCalendar" 
 bind:confirm="onCalendarConfirm" 
 min-date="{{ minDate }}"
-
+max-date="{{ maxDate }}"
 />
+<!-- 弹出层 -->
+<van-popup 
+round
+show="{{ showPopup }}" 
+bind:close="onClosePopup"
+ position="bottom" 
+ custom-style="height: 50%"
+ >
+ <!-- 时间选择器 -->
+ <van-datetime-picker
+  type="date"
+  value="{{ currentDate }}"
+  min-date="{{ minDate }}"
+  max-date="{{ maxDate }}"
+  bind:confirm="onDateConfirm"
+  bind:cancel="onDateCancel"
+/>
+ </van-popup>

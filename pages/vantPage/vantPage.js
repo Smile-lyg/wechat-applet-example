@@ -1,37 +1,68 @@
 // pages/vantPage/vantPage.js
-import {$formatTimeMini} from '../../utils/util'
+import {
+  $formatTimeMini
+} from '../../utils/util'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    bornDate:'',   // 日期
-    showCalendar: false ,    // 是否显示日历组件
-    minDate:new Date('2021-9-1').getTime(),    // 最小日期范围
-    // maxDate:new Date().getTime()    // 最大日期
+    bornDate: '', // 日期
+    inDate: '',
+    showCalendar: false, // 是否显示日历组件
+    minDate: new Date('2020-9-1').getTime(), // 最小日期范围
+    maxDate: new Date('2022-9-1').getTime(), // 最大日期
+    showPopup: false, // 是否显示弹出层
+    currentDate: new Date().getTime(), // 当前时间
   },
   // 显示日历控件
-  onShowCalendar(){
+  onShowCalendar() {
     this.setData({
-      showCalendar:true
+      showCalendar: true
     })
   },
   // 隐藏日历组件
-  onCloseCalendar(){
+  onCloseCalendar() {
     this.setData({
-      showCalendar:false
+      showCalendar: false
     })
   },
   // 确定选择日期
-  onCalendarConfirm({detail}){
+  onCalendarConfirm({
+    detail
+  }) {
     let date = new Date(detail)
     this.setData({
       bornDate: $formatTimeMini(date)
     })
     this.onCloseCalendar()
   },
-  
+  // 显示弹出层
+  onShowPopup() {
+    this.setData({
+      showPopup: true
+    })
+  },
+  // 隐藏弹出层
+  onClosePopup() {
+    this.setData({
+      showPopup: false
+    })
+  },
+  // 时间选择器确认
+  onDateConfirm({
+    detail
+  }) {
+    this.setData({
+      inDate: $formatTimeMini(new Date(detail)),
+      showPopup: false
+    })
+  },
+  // 时间选择器取消
+  onDateCancel() {
+    this.onClosePopup()
+  },
   /**
    * 生命周期函数--监听页面加载
    */
